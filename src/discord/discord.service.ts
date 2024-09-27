@@ -1,7 +1,7 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { Client } from 'discord.js';
-import { Context, ContextOf, On, Once } from 'necord';
-import { DiscordCommands } from './discord.commands';
+import { Injectable, Logger } from "@nestjs/common";
+import { Client } from "discord.js";
+import { Context, ContextOf, On, Once } from "necord";
+import { DiscordCommands } from "./discord.commands";
 
 @Injectable()
 export class DiscordService extends DiscordCommands {
@@ -11,13 +11,13 @@ export class DiscordService extends DiscordCommands {
     super();
   }
 
-  @Once('ready')
-  public onReady(@Context() [client]: ContextOf<'ready'>) {
+  @Once("ready")
+  public onReady(@Context() [client]: ContextOf<"ready">) {
     this.logger.log(`App is ready ${client.user.username}`);
   }
 
-  @On('warn')
-  public onWarn(@Context() [message]: ContextOf<'warn'>) {
+  @On("warn")
+  public onWarn(@Context() [message]: ContextOf<"warn">) {
     this.logger.warn(message);
   }
 }

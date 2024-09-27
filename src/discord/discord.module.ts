@@ -1,8 +1,8 @@
-import { Module } from '@nestjs/common';
-import { IntentsBitField } from 'discord.js';
-import { NecordModule } from 'necord';
-import { DiscordService } from './discord.service';
-import * as dotenv from 'dotenv';
+import { Module } from "@nestjs/common";
+import { IntentsBitField } from "discord.js";
+import { NecordModule } from "necord";
+import { DiscordService } from "./discord.service";
+import * as dotenv from "dotenv";
 
 dotenv.config();
 

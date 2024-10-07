@@ -8,6 +8,7 @@ export class DiscordService extends DiscordCommands {
   private readonly logger = new Logger(DiscordService.name);
 
   public constructor(private readonly client: Client) {
+    console.log("DiscordService constructor");
     super();
   }
 
